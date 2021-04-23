@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма доставки</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        
+        <div class="form">
+            <div class="info">
+                <div class="info__text">
+                    Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
+                </div>
+            </div>
+            <form action="#" id="form">
+                <h1 class="form__title">Прямая машина</h1>
+                <div class="form__item">
+                    <div class="form__top-item">
+                        <label for="formName" class="form__label">
+                            <span class="form__serial-number">1</span> 
+                            Маршрут
+                        </label>
+                    </div>
+                    <label for="formName" class="form__under-item">Откуда</label>
+                    <input type="text" id="formName" name="route" class="form__input">
+                    <label for="formRoad" class="form__under-item">Куда</label>
+                    <input type="text" id="formRoad" name="road" class="form__input">
+                </div>
+
+                <div class="form__item">
+                    <div class="form__top-item">
+                        <label class="form__label">
+                            <span class="form__serial-number">2</span> 
+                            Транспорт
+                        </label>
+                    </div>
+                    <div class="form__group-mini">
+                        <div class="form__item-mini">
+                            <label for="formCargo" class="form__under-item">Грузоподъёмность</label>
+                            <select name="cargo" id="formCargo" class="form__select">
+                                <option value="1">Не выбрана</option>
+                                <option value="2">до 100 кг</option>
+                                <option value="3">до 200 кг</option>
+                                <option value="4">до 300 кг</option>
+                                <option value="5">до 400 кг</option>
+                            </select>
+                        </div>
+                        <div class="form__item-mini">
+                            <label for="formWay" class="form__under-item">Способ погрузки</label>
+                            <select name="cargo" id="formWay" class="form__select">
+                                <option value="1">Не выбрана</option>
+                                <option value="2">Задняя</option>
+                                <option value="3">Грузчики</option>
+                                <option value="4">Ричтрак</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__top-item">
+                        <label class="form__label">
+                            <span class="form__serial-number">3</span> 
+                            Груз
+                        </label>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="formType" class="form__under-item">Тип груза</label>
+                        <select name="type" id="formType" class="form__select_big">
+                            <option value="1">Не выбран</option>
+                            <option value="2">Хрупкий</option>
+                            <option value="3">Палета</option>
+                            <option value="4">Товары первой необходимости</option>
+                            <option value="5">Срочный</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group-mini">
+                        <div class="form__item-mini">
+                            <label for="formDanger" class="form__under-item">Класс опасности</label>
+                            <select name="cargo" id="formDanger" class="form__select">
+                                <option value="1">Не выбрана</option>
+                                <option value="2">Класс опасности №1</option>
+                                <option value="3">Класс опасности №2</option>
+                                <option value="4">Класс опасности №3</option>
+                            </select>
+                        </div>
+                        <div class="form__item-mini">
+                            <label for="formWay-2" class="form__under-item">Способ погрузки</label>
+                            <select name="cargo" id="formWay-2" class="form__select">
+                                <option class="form__option" value="1">Не выбрана</option>
+                                <option class="form__option" value="2">Задняя</option>
+                                <option class="form__option" value="3">Грузчики</option>
+                                <option class="form__option" value="4">Ричтрак</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input cheked id="temperature" name="temperature" type="checkbox" class="checkbox__input">
+                        <label for="temperature" class="checkbox__label">Требуется температурный режим</label>
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <div class="form__top-item">
+                        <label class="form__label">
+                            <span class="form__serial-number">4</span> 
+                            Время
+                        </label>
+                    </div>
+                    <div class="options">
+                        <label class="form__under-item">Откуда</label>
+                        <div class="options__item">
+                            <input id="address-1" type="radio" checked value="1" name="address" class="options__input">
+                            <label for="address-1" class="options__label">Адрес не указан</label>
+                            <button class="options__button">НЕ ВЫБРАНО</button>
+                        </div>
+                        <div class="options__item">
+                            <input id="address-2" type="radio" name="address" value="2" class="options__input">
+                            <label for="address-2" class="options__label">Адрес не указан</label>
+                            <button class="options__button">НЕ ВЫБРАНО</button>
+                        </div>
+                        <label for="formMessage" class="form__under-item">Комментарий к заказу</label>
+                        <textarea id="formMessage" name="message" placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу" cols="30" rows="10" class="options__message"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>
